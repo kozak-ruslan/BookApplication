@@ -1,0 +1,28 @@
+<section>
+  <h1>Сторінка книга</h1>
+  <h2>{{bookDetails?.bookName}}</h2>
+  
+  <div class="display-flex">
+    <img src={{bookDetails?.img}}>
+    <div>
+        <h4>Автор: </h4>
+        <ul class="container-aithor">
+          <li *ngFor="let author of bookDetails?.authors"
+            [routerLink]="['/author/details/', author.authorId]">
+            {{author.authorName}}
+          </li>
+        </ul>
+        <h4>Жанр: </h4>
+        <ul class="container-aithor">
+          <li *ngFor="let genre of bookDetails?.genres"
+            [routerLink]="['/genre/details/', genre.genreId]">
+            {{genre.genreName}}
+          </li>
+        </ul>
+      <div class="description">
+        {{bookDetails?.description}}
+      </div>
+    </div>
+  </div>
+</section>
+

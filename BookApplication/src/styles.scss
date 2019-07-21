@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body{
+    min-height: 100vh;
+    margin: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    padding: 0;
+    .container-root{
+        max-width: 1600px;
+        margin: 0 auto;
+        h1{
+            font-size: 34px;
+            text-align: center;
+        }
+    }
+}
+img{
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    width: auto;
+    padding: 0 10px 10px 0;
+}
+.display-flex {
+    display: flex;
+}
+ul{
+    li{
+        cursor: pointer;
+    }
+}

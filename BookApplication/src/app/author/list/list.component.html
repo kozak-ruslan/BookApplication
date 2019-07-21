@@ -1,0 +1,18 @@
+<section>
+  <h1>Список авторів</h1>
+  <div class="list-author">
+    <mat-card *ngFor="let item of authorsList; let i = index">
+      <div class="col-index">{{i + 1}}</div>
+      <img [src]="item.img">
+      <div class="name">
+        <button mat-button [matMenuTriggerFor]="menu">{{item.authorName}}</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item [routerLink]="['/author/details/', item.authorId]">Детальніше про автора</button>
+          <button mat-menu-item
+            *ngFor="let book of item.books"
+            [routerLink]="['/book/details/', book.bookId]">{{book.bookName}}</button>
+        </mat-menu>
+      </div>
+    </mat-card>
+  </div>
+</section>

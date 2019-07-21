@@ -1,0 +1,42 @@
+.container-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 50%));
+    .block-book {
+        margin: 20px;
+        box-shadow: 0 0 1px 1px #e3dfdf;
+        padding: 20px;
+        display: flex;
+        transition: .2s;
+        &:hover {
+            box-shadow: 0 0 5px 2px #e3dfdf;
+        }
+        .col-index{
+            padding: 0 5px 0 0;
+            color: #000000;
+        }
+        img{
+            max-width: 150px;
+            max-height: 150px;
+            height: auto;
+            width: auto;
+            padding: 0 10px 10px 0;
+        }
+        .name-book{
+            color: #333;
+            font-weight: 700;
+            font-size: 17px;
+            cursor: pointer;
+        }
+        ul{
+            li{
+                color: #999;
+                font-weight: 100;
+                font-size: 13px;
+                cursor: pointer;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}

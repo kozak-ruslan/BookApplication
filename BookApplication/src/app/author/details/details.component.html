@@ -1,0 +1,11 @@
+<section>
+  <h1>Сторінка автор</h1>
+  <h2>{{authorDetails?.authorName}}</h2>
+  <img [src]='authorDetails.img'>
+  <ul class="container-aithor">
+      <li *ngFor="let book of authorDetails?.books"
+      [routerLink]="['/book/details/', book.bookId]">{{book.bookName}}</li>
+  </ul>
+  <div class="description">{{authorDetails.biography}}</div>
+</section>
+

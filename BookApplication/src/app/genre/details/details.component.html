@@ -1,0 +1,18 @@
+<section>
+    <h1>Сторінка жанр</h1>
+    <h2>{{genreDetails?.genreName}}</h2>
+      <h4>Автори: </h4>
+      <ul class="container-aithor">
+        <li *ngFor="let author of genreDetails?.authors"
+          [routerLink]="['/author/details/', author.authorId]">
+          {{author.authorName}}
+        </li>
+      </ul>
+      <h4>Книги: </h4>
+      <ul class="container-aithor">
+        <li *ngFor="let book of genreDetails?.books"
+          [routerLink]="['/book/details/', book.bookId]">
+          {{book.bookName}}
+        </li>
+      </ul>
+  </section>

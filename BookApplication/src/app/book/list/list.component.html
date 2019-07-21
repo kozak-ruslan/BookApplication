@@ -1,0 +1,22 @@
+<section>
+ <h1>
+    Список книг
+ </h1>
+  <div class=""></div>
+  <div class="container-list">
+    <div class="block-book" *ngFor="let item of listBooks; let i = index">
+      <div class="col-index">{{i + 1}}</div>
+      <img src={{item.img}}>
+      <div class="block-info">
+
+        <div class="name-book" [routerLink]="['/book/details/', item.bookId]">{{item.bookName}}</div>
+        <ul class="container-aithor">
+          <li *ngFor="let author of item.authors"
+            [routerLink]="['/author/details/', author.authorId]">
+            {{author.authorName}} {{author.authorId}}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
